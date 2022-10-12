@@ -31,68 +31,74 @@ class _RegistorPageDemoState extends State<RegistorPageDemo> {
         ),
         height: double.infinity,
         width: double.infinity,
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(
-                top: 140,
-              ),
-              height: 100,
-              width: 100,
-              decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("img/d_logo.png"),fit: BoxFit.fill)
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                top: 32,
-              ),
-              alignment: Alignment.center,
-              height: 40,
-              width: double.infinity,
-              child: Text(
-                'Dhaka Choice Discount App',
-                style: GoogleFonts.poppins(fontSize: 20,fontWeight: FontWeight.w500),
-              ),
-            ),
-            Container(
-              height: 44,
-              width: double.infinity,
-              child: Center(
-                child: Text(
-                  'Savings your money from our apps',
-                  style: GoogleFonts.poppins(fontSize: 15,fontWeight: FontWeight.w400),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(
+                  top: 140,
+                ),
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage("img/d_logo.png"),fit: BoxFit.fill)
                 ),
               ),
-            ),
-            SizedBox(
-              height: 80,
-            ),
-            InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => Sign_In_Page(),));
-              },
-              child: CustomButton(
-                Buttonnamr: "Sign In",
+              Container(
+                margin: EdgeInsets.only(
+                  top: 32,
+                ),
+                alignment: Alignment.center,
+                height: 40,
+                width: double.infinity,
+                child: Text(
+                  'Dhaka Choice Discount App',
+                  style: GoogleFonts.poppins(fontSize: 20,fontWeight: FontWeight.w500),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 25,
-            ),
-            InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) =>  REgistrationPage(),));
-
-              },
-              child: CustomButton(
-
-                Buttonnamr: "Registration",
+              Container(
+                height: 44,
+                width: double.infinity,
+                child: Center(
+                  child: Text(
+                    'Savings your money from our apps',
+                    style: GoogleFonts.poppins(fontSize: 15,fontWeight: FontWeight.w400),
+                  ),
+                ),
               ),
-            ),
+              SizedBox(
+                height: 80,
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => Sign_In_Page(),));
+                },
+                child: CustomButton(
+                  Buttonnamr: "Sign In",
+                ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) =>  REgistrationPage(),));
 
-          ],
+                },
+                child: Container(
+                  margin: EdgeInsets.only(
+                    bottom: 50,
+                  ),
+                  child: CustomButton(
+                    Buttonnamr: "Registration",
+                  ),
+                ),
+              ),
+
+            ],
+          ),
         ),
       ) ,
     );

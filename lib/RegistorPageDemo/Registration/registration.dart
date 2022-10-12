@@ -1,3 +1,4 @@
+import 'package:dcl/AfterRegistrationHome/after_registration_home.dart';
 import 'package:dcl/Custom/CustomButton/custom_button.dart';
 import 'package:dcl/Custom/CustomTextFromField/custom_text_from_field.dart';
 import 'package:flutter/material.dart';
@@ -93,12 +94,13 @@ class _REgistrationPageState extends State<REgistrationPage> {
                Container(
                  height: 80,
                  child: CustomTextFromField(
-                     obscureText: false,
+                   maxLines: 1,
+                     obscureText: true,
                      hintText: "Enter your name",
                      controller: _phoneController,
                      validator: (value) {
                        if (value!.isEmpty) {
-                         return "Wrong Mobail Number";
+                         return "Enter your name";
                        }
                      },
                      color: Colors.black38,
@@ -127,12 +129,13 @@ class _REgistrationPageState extends State<REgistrationPage> {
                  height: 80,
                  alignment: Alignment.centerLeft,
                  child: CustomTextFromField(
-                   obscureText:  obscureext,
+                   maxLines: 1,
+                   obscureText:  true,
                    hintText: "+880 1234567891",
                    controller: _passwordController,
                    validator: (value) {
                      if (value!.isEmpty) {
-                       return phone = "Wrong Mobail Number";
+                       return phone = "Enter Mobile Number";
                      }
                    },
                    color: Colors.black38,
@@ -176,7 +179,7 @@ class _REgistrationPageState extends State<REgistrationPage> {
                  alignment: Alignment.centerLeft,
                  child: CustomTextFromField(
                    maxLines: 4,
-                   obscureText:  true,
+                   obscureText:  false,
                    hintText: "Enter address",
                    controller: _addressController,
                    validator: (value) {
@@ -279,7 +282,7 @@ class _REgistrationPageState extends State<REgistrationPage> {
                      print(
                        "Submit Sucess full",
                      );
-
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => AfterRegistrationHome(),));
                    }
                  },
                  child: CustomButton(

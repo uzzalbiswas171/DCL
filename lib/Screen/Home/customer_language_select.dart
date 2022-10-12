@@ -1,3 +1,4 @@
+import 'package:dcl/AfterRegistrationHome/after_registration_home.dart';
 import 'package:dcl/RegistorPageDemo/registor_page_demo.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,6 +12,8 @@ class CustomerLanguageSelectPage extends StatefulWidget {
 }
 
 class _CustomerLanguageSelectPageState extends State<CustomerLanguageSelectPage> {
+  bool Language_is_checed=true;
+  bool person_is_checed=true;
   int _stackIndex = 0;
   String _singleValue = "Text alignment right";
   String _verticalGroupValue = "Pending";
@@ -19,6 +22,13 @@ class _CustomerLanguageSelectPageState extends State<CustomerLanguageSelectPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => AfterRegistrationHome(),));
+      },
+        backgroundColor: Colors.greenAccent,
+      child: Icon(Icons.account_circle,size: 33,color: Colors.white,),
+      ),
       backgroundColor: Color(0xffffffff),
       body: Container(
         height: double.infinity,
@@ -94,82 +104,66 @@ class _CustomerLanguageSelectPageState extends State<CustomerLanguageSelectPage>
 
                 child: Column(
                   children: [
-                    Container(
-                      padding: EdgeInsets.only(
-                        left: 16,
-                        right: 16,
-                      ),
-                      height: 61,
-                      width: double.infinity,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Text("English",style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,fontSize: 14,
-                            ),),
-                          ),
-                          Container(
-                            child:
-                            RadioButton(
-                              description: " ",
-                              value: " ",
-                              groupValue: _singleValue,
-                              onChanged: (value) => setState(
-                                      () {
-                                  }
-                              ),
-                              activeColor: Colors.red,
-                              textStyle: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.red
-                              ),
+                    InkWell(
+                      onTap: (){
+                        setState((){
+                          Language_is_checed=!Language_is_checed;
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(
+                          left: 16,
+                          right: 16,
+                        ),
+                        height: 61,
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Text("English",style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black,fontSize: 14,
+                              ),),
                             ),
-                          ),
-                        ],
+                            Container(
+                              child:Icon(Language_is_checed==true?Icons.radio_button_checked_outlined:Icons.radio_button_off),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Divider(
                       height: 1,
                       color: Color(0xff898B8B),
                     ),
-                    Container(
-                      padding: EdgeInsets.only(
-                        left: 16,
-                        right: 16,
-                      ),
-                      height: 56,
-                      width: double.infinity,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Text("বাংলা",style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,fontSize: 14,
-                            ),),
-                          ),
-                          Container(
-                            child:
-                            RadioButton(
-                              description: " ",
-                              value: " ",
-                              groupValue: _singleValue,
-                              onChanged: (value) => setState(
-                                      () {
-                                  }
-                              ),
-                              activeColor: Colors.red,
-                              textStyle: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.red
-                              ),
+                    InkWell(
+                      onTap: (){
+                        setState((){
+                          Language_is_checed=!Language_is_checed;
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(
+                          left: 16,
+                          right: 16,
+                        ),
+                        height: 56,
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Text("বাংলা",style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black,fontSize: 14,
+                              ),),
                             ),
-                          ),
-                        ],
+                            Container(
+                              child:Icon(Language_is_checed?Icons.radio_button_off:Icons.radio_button_checked_outlined),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -196,7 +190,8 @@ class _CustomerLanguageSelectPageState extends State<CustomerLanguageSelectPage>
                 height: 120,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Color(0xfff2f5f5),
+                 // color: Colors.red,
+                 color: Color(0xfff2f5f5),
                   borderRadius: BorderRadius.circular(11),
                 ),
 
@@ -209,16 +204,23 @@ class _CustomerLanguageSelectPageState extends State<CustomerLanguageSelectPage>
                       ),
                       height: 61,
                       width: double.infinity,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Text("Customer"),
-                          ),
-                          Container(
-                            child:Icon(Icons.arrow_forward_ios),
-                          ),
-                        ],
+                      child: InkWell(
+                        onTap: (){
+                          setState((){
+                            person_is_checed=!person_is_checed;
+                          });
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Text("Customer"),
+                            ),
+                            Container(
+                              child:Icon(Icons.arrow_forward_ios),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Container(
@@ -252,6 +254,9 @@ class _CustomerLanguageSelectPageState extends State<CustomerLanguageSelectPage>
                   (context) => RegistorPageDemo(),));
                 },
                 child: Container(
+                  margin: EdgeInsets.only(
+                    bottom: 50,
+                  ),
                   decoration: BoxDecoration(
                       color: Color(0xffFD6501),
                       borderRadius: BorderRadius.circular(22)

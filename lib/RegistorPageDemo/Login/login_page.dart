@@ -15,6 +15,7 @@ class Sign_In_Page extends StatefulWidget {
 class _Sign_In_PageState extends State<Sign_In_Page> {
   String? phone, pass;
   bool obscureext = false;
+  bool obscurtext = true;
   TextEditingController _phoneController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
   final _formkey = GlobalKey<FormState>();
@@ -36,6 +37,7 @@ class _Sign_In_PageState extends State<Sign_In_Page> {
             )),
       ),
       body: Container(
+        color: Colors.white,
         height: double.infinity,
         width: double.infinity,
         padding: EdgeInsets.only(
@@ -127,19 +129,18 @@ class _Sign_In_PageState extends State<Sign_In_Page> {
                 SizedBox(
                   height: 8,
                 ),
-                Container(
+                Container(                     ////////////////error////////////
                   height: 80,
                   alignment: Alignment.centerLeft,
+
                   child: CustomTextFromField(
-                    obscureText: !obscureext,
+                    maxLines: 1,
+                    obscureText: obscurtext,
                     hintText: "*********",
                     controller: _passwordController,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return phone = "Wrong Mobail Number";
-                      }
-                      if (!value.contains("123")) {
-                        return phone = "Wrong Mobail Number";
+                        return phone = "Wrong Password";
                       }
                     },
                     color: Colors.black38,
@@ -149,7 +150,7 @@ class _Sign_In_PageState extends State<Sign_In_Page> {
                       child: IconButton(
                           onPressed: () {
                             setState(() {
-                              obscureext = !obscureext;
+                              obscurtext = !obscurtext;
                             });
                           },
                           icon: Icon(obscureext == false

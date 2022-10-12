@@ -1,9 +1,11 @@
-import 'package:dcl/RegistorPageDemo/CreatNewPawsword/create_new_password.dart';
-import 'package:dcl/RegistorPageDemo/CustomerProfile/customer_profile.dart';
-import 'package:dcl/RegistorPageDemo/Login/login_page.dart';
-import 'package:dcl/RegistorPageDemo/Registration/registration.dart';
-import 'package:dcl/RegistorPageDemo/VerifyDemo/verify_demo.dart';
+
+import 'package:dcl/AfterRegistrationHome/CustomerDashBoard/customer_dashboard.dart';
+import 'package:dcl/AfterRegistrationHome/after_registration_home.dart';
+import 'package:dcl/PageView/pageview/pageviewhome.dart';
 import 'package:dcl/Screen/Home/customer_language_select.dart';
+import 'package:dcl/StorePage/DuesHistory/dues_history.dart';
+import 'package:dcl/StorePage/RetailerShop/DiscountHistoryPage/discount_history_page.dart';
+import 'package:dcl/StorePage/purchase_histore.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,8 +24,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-     // home: const CustomerLanguageSelectPage(),
-     home: const CustomerProfile(),
+    home: const CustomerLanguageSelectPage(),
+     //  home: const CustomerDashboard(),
+       //    home: const AfterRegistrationHome(),
+      // home:  MyHomePage(),
+     // home:  PurchasHistoryPage(),
+     // home:  DiscountHistoryPage(),
+  //  home:  AfterRegistrationHome(),
+      //  home:  DuesHistory(),
+
     );
   }
 }

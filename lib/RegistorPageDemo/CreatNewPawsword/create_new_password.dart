@@ -85,6 +85,7 @@ class _CreatNewPawswordState extends State<CreatNewPawsword> {
                   height: 80,
                   alignment: Alignment.centerLeft,
                   child: CustomTextFromField(
+                    maxLines: 1,
                     obscureText: !obscureext,
                     hintText: "*********",
                     controller: _newpasswordController,
@@ -133,6 +134,7 @@ class _CreatNewPawswordState extends State<CreatNewPawsword> {
                   height: 80,
                   alignment: Alignment.centerLeft,
                   child: CustomTextFromField(
+                    maxLines: 1,
                     obscureText: !obscureext,
                     hintText: "*********",
                     controller: _conpasswordController,
