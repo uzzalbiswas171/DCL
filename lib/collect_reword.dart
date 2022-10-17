@@ -116,7 +116,8 @@ class _CollectRewardPointPageState extends State<CollectRewardPointPage> {
                                           ),
                                         )
                                       ],
-                                    )
+                                    ),
+                                    Container()
                                   ],
                                 ),
                               )

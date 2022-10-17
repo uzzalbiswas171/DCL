@@ -1,5 +1,6 @@
 
 import 'package:dcl/AfterRegistrationHome/after_registration_home.dart';
+import 'package:dcl/GoogleMap/googlemap.dart';
 import 'package:dcl/RegistorPageDemo/CustomerProfile/customer_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +58,7 @@ class CustomButtomNavigationBar extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: (){
-
+                      //  Navigator.push(context, MaterialPageRoute(builder: (context) => (),));
                   },
                   child: Icon(
                     Icons.location_on_outlined,

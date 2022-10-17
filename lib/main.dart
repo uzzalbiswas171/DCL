@@ -3,8 +3,11 @@ import 'package:dcl/AfterRegistrationHome/CustomerDashBoard/customer_dashboard.d
 import 'package:dcl/AfterRegistrationHome/after_registration_home.dart';
 import 'package:dcl/PageView/pageview/pageviewhome.dart';
 import 'package:dcl/Screen/Home/customer_language_select.dart';
+import 'package:dcl/StorePage/DuesHistory/Bill/PaymentDone/paymentdone.dart';
+import 'package:dcl/StorePage/DuesHistory/Bill/pay_bill.dart';
 import 'package:dcl/StorePage/DuesHistory/dues_history.dart';
 import 'package:dcl/StorePage/RetailerShop/DiscountHistoryPage/discount_history_page.dart';
+import 'package:dcl/StorePage/ShopRewordpoint/shoprewordpoint.dart';
 import 'package:dcl/StorePage/purchase_histore.dart';
 import 'package:flutter/material.dart';
 
@@ -24,15 +27,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-    home: const CustomerLanguageSelectPage(),
+     // home: const CustomerLanguageSelectPage(),
      //  home: const CustomerDashboard(),
        //    home: const AfterRegistrationHome(),
       // home:  MyHomePage(),
      // home:  PurchasHistoryPage(),
      // home:  DiscountHistoryPage(),
-  //  home:  AfterRegistrationHome(),
-      //  home:  DuesHistory(),
+  // home:  AfterRegistrationHome(),
+    //   home:  DuesHistory(),
+    //  home:  Bill_Pay_page(),
+    // home:  PaymentDone(),
+     home:  Shop_Reword_point(),
 
     );
   }
 }
+

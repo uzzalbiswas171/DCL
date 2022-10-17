@@ -68,20 +68,23 @@ class DuesCategory extends StatelessWidget {
                             showDialog(
                               context: context,
                               builder: (_) => AlertDialog(
-
                                 content: Container(
                                   height: 100,
                                   width: 300,
                                   child: Column(
                                     children: [
                                       InkWell(
-                                        onTap: () {
-
-                                        },
+                                        onTap: () {},
                                         child: Row(
                                           children: [
-                                            Icon(Icons.visibility_outlined,color: Colors.grey,size: 22,),
-                                            SizedBox(width: 10,),
+                                            Icon(
+                                              Icons.visibility_outlined,
+                                              color: Colors.grey,
+                                              size: 22,
+                                            ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
                                             Text(
                                               "View Invoice",
                                               style: GoogleFonts.poppins(
@@ -93,15 +96,21 @@ class DuesCategory extends StatelessWidget {
                                           ],
                                         ),
                                       ),
-                                      SizedBox(height: 15,),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
                                       InkWell(
-                                        onTap: () {
-
-                                        },
-                                        child:Row(
+                                        onTap: () {},
+                                        child: Row(
                                           children: [
-                                            Icon(Icons.save_alt,color: Colors.grey,size: 22,),
-                                            SizedBox(width: 10,),
+                                            Icon(
+                                              Icons.save_alt,
+                                              color: Colors.grey,
+                                              size: 22,
+                                            ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
                                             Text(
                                               "Download Invoice",
                                               style: GoogleFonts.poppins(
@@ -113,15 +122,28 @@ class DuesCategory extends StatelessWidget {
                                           ],
                                         ),
                                       ),
-                                      SizedBox(height: 15,),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
                                       InkWell(
                                         onTap: () {
-Navigator.push(context, MaterialPageRoute(builder: (context) => Bill_Pay_page(),));
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Bill_Pay_page(),
+                                              ));
                                         },
                                         child: Row(
                                           children: [
-                                            Icon(Icons.send,color: Colors.grey,size: 22,),
-                                            SizedBox(width: 10,),
+                                            Icon(
+                                              Icons.send,
+                                              color: Colors.grey,
+                                              size: 22,
+                                            ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
                                             Text(
                                               "Pay Bill",
                                               style: GoogleFonts.poppins(

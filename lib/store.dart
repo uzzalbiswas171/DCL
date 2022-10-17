@@ -1,6 +1,7 @@
 
 import 'package:dcl/StorePage/DuesHistory/dues_history.dart';
 import 'package:dcl/StorePage/RetailerShop/DiscountHistoryPage/discount_history_page.dart';
+import 'package:dcl/StorePage/ShopRewordpoint/shoprewordpoint.dart';
 import 'package:dcl/StorePage/purchase_histore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -260,70 +261,75 @@ class StorePage extends StatelessWidget {
                     )),
                 Expanded(
                     flex: 1,
-                    child: Container(
-                      margin: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage("img/reward_points.png"),fit: BoxFit.fill),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      padding: EdgeInsets.all(10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                    child: InkWell(
+                      onTap: () {
+                             Navigator.push(context, MaterialPageRoute(builder: (context) => Shop_Reword_point(),));
+                      },
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(image: AssetImage("img/reward_points.png"),fit: BoxFit.fill),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        padding: EdgeInsets.all(10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
 
-                          Expanded(
-                            flex: 2,
-                            child: Container(
-                              alignment: Alignment.center,
-                              height: 41,
-                              width:  47,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(50)
-                              ),
+                            Expanded(
+                              flex: 2,
                               child: Container(
-                                height: 30,
-                                width:  30,
+                                alignment: Alignment.center,
+                                height: 41,
+                                width:  47,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                        "img/reepo.png",
-                                      ),
-                                      fit: BoxFit.fill,
-                                    )),
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(50)
+                                ),
+                                child: Container(
+                                  height: 30,
+                                  width:  30,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          "img/reepo.png",
+                                        ),
+                                        fit: BoxFit.fill,
+                                      )),
+                                ),
+                                //  child:Image.asset("${mylist[index].icon}",fit: BoxFit.fill,)
                               ),
-                              //  child:Image.asset("${mylist[index].icon}",fit: BoxFit.fill,)
                             ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              height: 40,
-                              alignment: Alignment.centerLeft,
-                              child: Text("Total Reward Point",
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                height: 40,
+                                alignment: Alignment.centerLeft,
+                                child: Text("Total Reward Point",
+                                    style: GoogleFonts.poppins(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w400),),
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                height: 40,
+                                alignment: Alignment.centerLeft,
+                                child: Text("Amount",
                                   style: GoogleFonts.poppins(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w400),),
+                              ),
                             ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              height: 40,
-                              alignment: Alignment.centerLeft,
-                              child: Text("Amount",
-                                style: GoogleFonts.poppins(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w400),),
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                height: 40,
+                                alignment: Alignment.centerLeft,
+                                child: Text("Ṭk ${TotalRewoardPoint}",
+                                  style: GoogleFonts.poppins(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w400),),
+                              ),
                             ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              height: 40,
-                              alignment: Alignment.centerLeft,
-                              child: Text("Ṭk ${TotalRewoardPoint}",
-                                style: GoogleFonts.poppins(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w400),),
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     )),
 

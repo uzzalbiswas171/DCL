@@ -1,6 +1,7 @@
 import 'package:dcl/AfterRegistrationHome/CustomerDashBoard/customer_dashboard.dart';
 import 'package:dcl/AfterRegistrationHome/CustomerSideMenu/customer_side_menue.dart';
 import 'package:dcl/Custom/CustomButtomNavigationBar/custom_buttom_navigation_bar.dart';
+import 'package:dcl/QRScannerValidation/qr_Scanner_validation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -75,7 +76,9 @@ class _AfterRegistrationHomeState extends State<AfterRegistrationHome> {
             // ),
             // color: Colors.amberAccent,
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => QRViewExample(),));
+              },
               icon: Icon(
                 Icons.document_scanner_outlined,
                 size: 25,
