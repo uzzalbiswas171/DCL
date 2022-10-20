@@ -2,12 +2,14 @@ import 'package:dcl/AfterRegistrationHome/CustomerSideMenu/customer_side_menue.d
 import 'package:dcl/Custom/CustomAppbarleading/custom_appbar_leading.dart';
 import 'package:dcl/Custom/CustomButtomNavigationBar/custom_buttom_navigation_bar.dart';
 import 'package:dcl/Custom/CustomText/custom_text.dart';
+import 'package:dcl/StorePage/ShopRewordpoint/Reward_Point_Withdraw/reward_point_withdraw.dart';
 import 'package:dcl/StorePage/ShopRewordpoint/collect_rewardpoint.dart';
 import 'package:dcl/StorePage/ShopRewordpoint/dhaa_choice_reward_point.dart';
 import 'package:flutter/material.dart';
 
 class Shop_Reword_point extends StatefulWidget {
   const Shop_Reword_point({Key? key}) : super(key: key);
+
   @override
   State<Shop_Reword_point> createState() => _Shop_Reword_pointState();
 }
@@ -92,57 +94,72 @@ class _Shop_Reword_pointState extends State<Shop_Reword_point> {
         width: double.infinity,
         color: Colors.white,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              flex: 4,
-              child: Container(
-                margin: EdgeInsets.symmetric(
-                  horizontal: 20
-                ),
-                ////////////////////////////////////////////////////////////////////
-                //f1     profile
-                height: 60,
-                // color: Colors.greenAccent,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      child: CustomText(
-                          text: "Wellcome back",
-                          color: Colors.black38,
-                          fontSize: 18,
-                          FontWeightt: FontWeight.w600),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              child: CustomText(
+                  text: "Wellcome back",
+                  color: Colors.black38,
+                  fontSize: 18,
+                  FontWeightt: FontWeight.w600),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              child: CustomText(
+                  text: "Dhaka Choice Rewards",
+                  color: Colors.black,
+                  fontSize: 18,
+                  FontWeightt: FontWeight.w600),
+            ),
+            SizedBox(
+              height: 24,
+            ),
+            DhaaChoiceRewardPoint(Totap_points: 12, value: 0.3),
+            Container(
+              margin: EdgeInsets.only(
+                top: 16,
+                bottom: 30,
+                left: 20,
+                right: 20,
+              ),
+              color: Colors.white,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomText(
+                      text: "400 PTS equals to Tk. 4",
+                      color: Color(0xff00222F),
+                      fontSize: 14,
+                      FontWeightt: FontWeight.w300),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Reward_Point_Withdraw(),
+                          ));
+                    },
+                    child: CustomText(
+                        text: "Withdraw",
+                        color: Color(0xff7D7C7C),
+                        fontSize: 12,
+                        FontWeightt: FontWeight.w400),
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Color(0xffC7CED0)),
                     ),
-                    Container(
-                      child: CustomText(
-                          text: "Md. Abdul Hamid",
-                          color: Colors.black,
-                          fontSize: 18,
-                          FontWeightt: FontWeight.w600),
-                    ),
-
-                      DhaaChoiceRewardPoint(Totap_points: 250),
-
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             Container(
-              //Category search//
-              height: 60,
-              width: double.infinity,
               color: Color(0xffE7F8FF),
+              height: 64,
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.only(
+                top: 24,
                 left: 20,
-                right: 20,
               ),
               child: CustomText(
                 text: "Collect Rewared Points",
@@ -152,8 +169,8 @@ class _Shop_Reword_pointState extends State<Shop_Reword_point> {
               ),
             ),
             Expanded(
-              flex: 5,
               child: Container(
+                width: double.infinity,
                 color: Color(0xffE7F8FF),
                 padding: EdgeInsets.only(
                   left: 20,
@@ -165,7 +182,7 @@ class _Shop_Reword_pointState extends State<Shop_Reword_point> {
                   itemCount: 10,
                   itemBuilder: (context, index) {
                     return CollectRedardPoint(
-                        Adderss: " Progoti Shoroni, Dhaka 1229",
+                        Adderss: "Progoti Shoroni, Dhaka 1229",
                         backgroundImage: AssetImage("img/user.png"),
                         RE_points: 80);
                   },

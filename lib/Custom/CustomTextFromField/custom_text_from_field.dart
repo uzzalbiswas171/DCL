@@ -10,6 +10,7 @@ class CustomTextFromField extends StatelessWidget {
      required this.hintText,
       this.suffixIcon,
       this.maxLines,
+      this.keyboardType,
      required this.obscureText,
   }) : super(key: key);
     bool obscureText;
@@ -18,11 +19,13 @@ class CustomTextFromField extends StatelessWidget {
   FormFieldValidator<String>? validator;
   final TextEditingController? controller;
     final Widget? suffixIcon;
+    TextInputType? keyboardType;
     int ?maxLines;
     String ?hintText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType:keyboardType,
 maxLines: maxLines,
       obscureText: obscureText,
       // style: TextStyle(

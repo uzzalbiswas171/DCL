@@ -1,4 +1,6 @@
+import 'package:dcl/AfterRegistrationHome/CustomerDashBoard/customer_search.dart';
 import 'package:dcl/Custom/CustomButtomNavigationBar/custom_buttom_navigation_bar.dart';
+import 'package:dcl/Custom/CustomText/custom_text.dart';
 import 'package:dcl/carasolslider.dart';
 import 'package:dcl/collect_reword.dart';
 import 'package:dcl/store.dart';
@@ -26,8 +28,6 @@ class _CustomerDashboardState extends State<CustomerDashboard> {
       ),
       body: Container(
         padding: EdgeInsets.only(
-          left: 20,
-          right: 20,
           top: 10,
         ),
         width: double.infinity,
@@ -42,6 +42,9 @@ class _CustomerDashboardState extends State<CustomerDashboard> {
             Container(////////////////////////////////////////////////////////////////////
             //f1     profile
             height: 60,
+            padding: EdgeInsets.only(
+              left: 20,
+              right: 20,),
             // color: Colors.greenAccent,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -71,44 +74,54 @@ class _CustomerDashboardState extends State<CustomerDashboard> {
                 )
               ],
             ),
-          ),     //profile/////////////////////////////////////////////////////////////////////////
-          Container(
-            //f2   search
-            margin: EdgeInsets.symmetric(
-              vertical: 8,
-            ),
-            decoration: BoxDecoration(
-              color: Color(0xffECF1F3),
-              borderRadius: BorderRadius.circular(22),
-            ),
-            height: 50,
-            width: double.infinity,
-            alignment: Alignment.centerLeft,
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.search,
-                        size: 25,
-                      )),
-                ),
-                Expanded(
-                  flex: 4,
-                  child: Container(
-                    height: 50,
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                          border: InputBorder.none, hintText: "Search"),
+          ),
+              //profile/////////////////////////////////////////////////////////////////////////
+            InkWell(
+              onTap: () => showSearch(context: context, delegate: Search()),
+              child: Container(
+              margin: EdgeInsets.symmetric(
+                vertical: 8,horizontal: 20,
+              ),
+              decoration: BoxDecoration(
+               color: Color(0xffECF1F3),
+                borderRadius: BorderRadius.circular(22),
+              ),
+              height: 50,
+              width: double.infinity,
+              alignment: Alignment.centerLeft,
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: IconButton(
+                      onPressed: () {
+                         showSearch(context: context, delegate: Search());
+                      },
+                        icon: Icon(
+                          Icons.search,
+                          size: 25,
+                        )),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      height: 50,
+                      alignment: Alignment.centerLeft,
+                      child: CustomText(text: "Search", color: Colors.grey, fontSize: 14, FontWeightt: FontWeight.w400),
+                      // child: TextFormField(
+                      //   decoration: InputDecoration(
+                      //       border: InputBorder.none, hintText: "Search"),
+                      // ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ),///////////////////////////////////////////////////////////////////
+                ],
+              ),
+          ),
+            ),///////////////////////////////////////////////////////////////////
               Container(
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,),
                 //f3 time
                 alignment: Alignment.centerLeft,
                 margin: EdgeInsets.only(
@@ -204,18 +217,17 @@ class _CustomerDashboardState extends State<CustomerDashboard> {
                     ),
                   ],
                 ),
-              ),           //time
-
+              ),
+                               //  store page //time
               StorePage(
                 amount: amount1,
                 TotalDiscount: amount12,
                 TotalDue: 500 * amount1,
               ),
-
-
-
-
               Container(
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,),
                 //Category search//
                 height: 60,
                 width: double.infinity,
@@ -231,6 +243,9 @@ class _CustomerDashboardState extends State<CustomerDashboard> {
                 ),
               ),     //Search Categories///////////////////////////////////////////////////////////////////
           Container(
+            padding: EdgeInsets.only(
+              left: 20,
+              right: 20,),
             height: 150,
             width: double.infinity,
             //  color: Colors.cyan,
@@ -434,6 +449,9 @@ class _CustomerDashboardState extends State<CustomerDashboard> {
           ),
               /////////////////////////////////////////////////////////////////////Search Categories///////////////////
               Container(
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,),
                 //Category search//
                 height: 60,
                 width: double.infinity,
@@ -450,6 +468,9 @@ class _CustomerDashboardState extends State<CustomerDashboard> {
               ),
               //shop suggestion
               Container(
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,),
                 //shop suggestion card  //
                 height: 160,
                 width: double.infinity,

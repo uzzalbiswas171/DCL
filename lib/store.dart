@@ -21,6 +21,9 @@ class StorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        padding: EdgeInsets.only(
+          left: 20,
+          right: 20,),
       //f4 grid view
       height: 300,
       width: double.infinity,
@@ -55,18 +58,16 @@ class StorePage extends StatelessWidget {
                              alignment: Alignment.center,
                              height: 41,
                              width:  47,
+                             padding: EdgeInsets.all(10),
                              decoration: BoxDecoration(
                                color: Colors.white,
                                borderRadius: BorderRadius.circular(50)
                              ),
                              child: Container(
-                               height: 30,
-                               width:  30,
                                decoration: BoxDecoration(
-                                   borderRadius: BorderRadius.circular(100),
                                    image: DecorationImage(
                                      image: AssetImage(
-                                       "img/total_pur.png",
+                                       "icon/totalpurchas.png"
                                      ),
                                      fit: BoxFit.fill,
                                    )),
@@ -136,10 +137,10 @@ class StorePage extends StatelessWidget {
                                    height: 30,
                                    width:  30,
                                    decoration: BoxDecoration(
-                                       borderRadius: BorderRadius.circular(100),
+                                     //  borderRadius: BorderRadius.circular(100),
                                        image: DecorationImage(
                                          image: AssetImage(
-                                           "img/total_diss.png",
+                                           "icon/totaldiscount.png",
                                          ),
                                          fit: BoxFit.fill,
                                        )),
@@ -217,10 +218,10 @@ class StorePage extends StatelessWidget {
                                   height: 30,
                                   width:  30,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(100),
+                                    //  borderRadius: BorderRadius.circular(100),
                                       image: DecorationImage(
                                         image: AssetImage(
-                                          "img/totalsue.png",
+                                          "icon/totaldues.png",
                                         ),
                                         fit: BoxFit.fill,
                                       )),
@@ -290,10 +291,10 @@ class StorePage extends StatelessWidget {
                                   height: 30,
                                   width:  30,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(100),
+                                     // borderRadius: BorderRadius.circular(100),
                                       image: DecorationImage(
                                         image: AssetImage(
-                                          "img/reepo.png",
+                                          "icon/rewardpoint.png",
                                         ),
                                         fit: BoxFit.fill,
                                       )),

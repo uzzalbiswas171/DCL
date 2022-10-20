@@ -27,12 +27,11 @@ String Adderss;
               //////////////collect reward point//////////
               flex: 2,
               child: CircleAvatar(
-                radius: 22,
+                radius: 21,
                 backgroundImage: backgroundImage,
-
-
               ),
             ),
+            SizedBox(width: 5,),
             Expanded(
               flex: 6,
               child: Container(
@@ -71,7 +70,7 @@ String Adderss;
                               Icons.location_on_outlined),
                           Container(
                             height: 42,
-                            width: 147,
+                            width: 130,
                             child: CustomText2(text: "${Adderss}", color:Colors.black38, fontSize: 14, FontWeightt: FontWeight.w400),
                           ),
 
@@ -83,7 +82,7 @@ String Adderss;
               ),
             ),
             Expanded(
-              flex: 4,
+              flex: 3,
               child: Container(
                 margin: EdgeInsets.only(),
                 height: 100,

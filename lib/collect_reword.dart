@@ -12,6 +12,13 @@ class _CollectRewardPointPageState extends State<CollectRewardPointPage> {
     return Column(
       children: [
         Container(
+          padding: EdgeInsets.only(
+            left: 20,
+            right: 20,
+            top: 24,
+            bottom: 16,
+          ),
+          margin: EdgeInsets.only(top: 30,),
           //Category search//
           height: 60,
           width: double.infinity,
@@ -27,6 +34,9 @@ class _CollectRewardPointPageState extends State<CollectRewardPointPage> {
           ),
         ),
         Container(
+    padding: EdgeInsets.only(
+    left: 20,
+    right: 20,),
           height: 520,
           width: double.infinity,
           color: Colors.cyan[100],

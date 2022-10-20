@@ -45,6 +45,7 @@ dependencies:
   easy_localization:
   font_awesome_flutter:
   webview_flutter:
+  get:
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - img/
+     - icon/
      - img_payment_method/
 
   # An image asset can refer to one or more resolution-specific "variants", see

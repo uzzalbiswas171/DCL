@@ -1,5 +1,9 @@
 
 import 'package:dcl/Custom/CustomerSlidemenue/customer_slidemenue.dart';
+import 'package:dcl/OrderCreat/order_sheet.dart';
+import 'package:dcl/Paymentmethod/payment_method.dart';
+import 'package:dcl/StorePage/ShopRewordpoint/Reward_Point_Withdraw/reward_point_withdraw.dart';
+import 'package:dcl/StorePage/ShopRewordpoint/shoprewordpoint.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 class CustomerSideMenu extends StatelessWidget {
@@ -71,10 +75,26 @@ class CustomerSideMenu extends StatelessWidget {
               CustomerSlidemenue(name: "Location Map", icon: Icons.location_on_outlined),
               CustomerSlidemenue(name: "QR Code & PIN Number", icon: Icons.qr_code_scanner),
               CustomerSlidemenue(name: "Refer Dhaka Choice App", icon: Icons.supervisor_account_outlined),
-              CustomerSlidemenue(name: "Cash Withdraw", icon: Icons.wine_bar),
-              CustomerSlidemenue(name: "Collected Reward Points ", icon: Icons.add_shopping_cart_sharp),
-              CustomerSlidemenue(name: "Payment Method", icon: Icons.payment_outlined),
-              CustomerSlidemenue(name: "Create Order Sheet", icon: Icons.add_box),
+              InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Reward_Point_Withdraw(),));
+                  },
+                  child: CustomerSlidemenue(name: "Cash Withdraw", icon: Icons.wine_bar)),
+              InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Shop_Reword_point(),));
+                  },
+                  child: CustomerSlidemenue(name: "Collected Reward Points ", icon: Icons.add_shopping_cart_sharp)),
+              InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>Paymentmethod(),));
+                  },
+                  child: CustomerSlidemenue(name: "Payment Method", icon: Icons.payment_outlined)),
+              InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => OrderSheet(),));
+                  },
+                  child: CustomerSlidemenue(name: "Create Order Sheet", icon: Icons.add_box)),
               CustomerSlidemenue(name: "24/7 Support", icon: Icons.watch_later_outlined),
               CustomerSlidemenue(name: "Feedback", icon: Icons.feedback_outlined),
               CustomerSlidemenue(name: "Log Out", icon: Icons.logout),

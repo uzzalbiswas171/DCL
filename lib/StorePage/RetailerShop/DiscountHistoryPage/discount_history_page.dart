@@ -54,287 +54,292 @@ class _DiscountHistoryPageState extends State<DiscountHistoryPage> {
           left: 20,
           right: 20,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 32,
-            ),
-            SearchDateDemo(
-                color: Colors.black45,
-                presentdateTimeController: _presentdateTimeController,
-                futuredateTimeController: _futuredateTimeController),
-            SizedBox(
-              height: 32,
-            ),
-            Container(
-              child: Text(
-                "Retailer Shop Purchase Discount",
-                style: GoogleFonts.poppins(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xff000000),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 32,
+              ),
+              SearchDateDemo(
+                  color: Colors.black45,
+                  presentdateTimeController: _presentdateTimeController,
+                  futuredateTimeController: _futuredateTimeController),
+              SizedBox(
+                height: 32,
+              ),
+              Container(
+                child: Text(
+                  "Retailer Shop Purchase Discount",
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xff000000),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            Expanded(
-              child: Container(
+              SizedBox(
+                height: 24,
+              ),
+              Container(
                 margin: EdgeInsets.only(bottom: 48),
                 child: Column(
                   children: [
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Color(0xffFFF4B9),
-                            borderRadius: BorderRadius.circular(11)
-                        ),
-                        width: double.infinity,
+                    Container(
+                      height: 103,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFFF4B9),
+                          borderRadius: BorderRadius.circular(11)
+                      ),
+                      width: double.infinity,
 
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Total Purchase Amount",
-                              style: GoogleFonts.poppins(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black45,
-                              ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Total Purchase Amount",
+                            style: GoogleFonts.poppins(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black45,
                             ),
-                            Text(
-                              "Tk. 10,000 ",
-                              style: GoogleFonts.poppins(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black54,
-                              ),
-                            )
-                          ],
-                        ),
+                          ),
+                          Text(
+                            "Tk. 10,000 ",
+                            style: GoogleFonts.poppins(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black54,
+                            ),
+                          )
+                        ],
                       ),
                     ),
                     SizedBox(
                       height: 16,
                     ),
-                    Expanded(
-                        flex: 1,
-                        child: Container(
-                          child: Row(
+                    Container(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex:1,
+                            child: Container(
+                              height: 101,
+                              width: 152,
+                              decoration: BoxDecoration(
+                                  color: Color(0xffD5F7FF),
+                                  borderRadius: BorderRadius.circular(11)
+                              ),
+
+                              child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Expanded(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        color: Color(0xffD5F7FF),
-                                        borderRadius: BorderRadius.circular(11)
-                                    ),
-
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "Discount From",
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black54,
-                                      ),
-                                    ),
-                                    Text(
-                                      "Dhaka choice",
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black54,
-                                      ),
-                                    ),
-                                    Text(
-                                      "Tk. 10,000 ",
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black54,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              )),
-                              SizedBox(
-                                width: 16,
-                              ),
-                              Expanded(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      color: Color(0xffEFE3FF),
-                                      borderRadius: BorderRadius.circular(11)
-                                  ),
-
-                                  child:Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text("Discount From",style: GoogleFonts.poppins(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black54,
-                                      ),),
-                                      Text("Retailer",style: GoogleFonts.poppins(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black54,
-                                      ),),
-                                      Text("Tk. 10,000 ",style: GoogleFonts.poppins(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black54,
-                                      ),)
-                                    ],
-                                  ),
+                              Text(
+                                "Discount From",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black54,
                                 ),
                               ),
+                              Text(
+                                "Dhaka choice",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black54,
+                                ),
+                              ),
+                              Text(
+                                "Tk. 10,000 ",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black54,
+                                ),
+                              )
                             ],
+                              ),
+                            ),
                           ),
-                        )),
+                          SizedBox(
+                            width: 16,
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              height: 101,
+                              width: 152,
+                              decoration: BoxDecoration(
+                                  color: Color(0xffEFE3FF),
+                                  borderRadius: BorderRadius.circular(11)
+                              ),
+
+                              child:Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("Discount From",style: GoogleFonts.poppins(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.black54,
+                                  ),),
+                                  Text("Retailer",style: GoogleFonts.poppins(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.black54,
+                                  ),),
+                                  Text("Tk. 10,000 ",style: GoogleFonts.poppins(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black54,
+                                  ),)
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ),
-            Container(
-              child: Text(
-                "Wholesaler Shop Purchase Discount",
-                style: GoogleFonts.poppins(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xff000000),
+              Container(
+                child: Text(
+                  "Wholesaler Shop Purchase Discount",
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xff000000),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            Expanded(
-              child: Container(
+              SizedBox(
+                height: 24,
+              ),
+              Container(
                 margin: EdgeInsets.only(bottom: 48),
                 child: Column(
                   children: [
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Color(0xffFFF4B9),
-                            borderRadius: BorderRadius.circular(11)
-                        ),
-                        width: double.infinity,
+                    Container(
+                      height: 103,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFFF4B9),
+                          borderRadius: BorderRadius.circular(11)
+                      ),
+                      width: double.infinity,
 
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Total Purchase Amount",
-                              style: GoogleFonts.poppins(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black45,
-                              ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Total Purchase Amount",
+                            style: GoogleFonts.poppins(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black45,
                             ),
-                            Text(
-                              "Tk. 10,000 ",
-                              style: GoogleFonts.poppins(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black54,
-                              ),
-                            )
-                          ],
-                        ),
+                          ),               //to
+                          Text(
+                            "Tk. 10,000 ",
+                            style: GoogleFonts.poppins(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black54,
+                            ),
+                          )
+                        ],
                       ),
                     ),
                     SizedBox(
                       height: 16,
                     ),
-                    Expanded(
-                        flex: 1,
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        color: Color(0xffD5F7FF),
-                                        borderRadius: BorderRadius.circular(11)
-                                    ),
+                    Container(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex:1,
+                            child: Container(
+                              height: 101,
+                              width: 152,
+                              decoration: BoxDecoration(
+                                  color: Color(0xffD5F7FF),
+                                  borderRadius: BorderRadius.circular(11)
+                              ),
 
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          "Discount From",
-                                          style: GoogleFonts.poppins(
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.black54,
-                                          ),
-                                        ),
-                                        Text(
-                                          "Dhaka choice",
-                                          style: GoogleFonts.poppins(
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.black54,
-                                          ),
-                                        ),
-                                        Text(
-                                          "Tk. 10,000 ",
-                                          style: GoogleFonts.poppins(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w500,
-                                            color: Colors.black54,
-                                          ),
-                                        )
-                                      ],
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Discount From",
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black54,
                                     ),
-                                  )),
-                              SizedBox(
-                                width: 16,
-                              ),
-                              Expanded(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      color: Color(0xffEFE3FF),
-                                      borderRadius: BorderRadius.circular(11)
                                   ),
-                                  child:Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text("Discount From",style: GoogleFonts.poppins(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black54,
-                                      ),),
-                                      Text("Retailer",style: GoogleFonts.poppins(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black54,
-                                      ),),
-                                      Text("Tk. 10,000 ",style: GoogleFonts.poppins(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black54,
-                                      ),)
-                                    ],
+                                  Text(
+                                    "Dhaka choice",
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black54,
+                                    ),
                                   ),
-                                ),
+                                  Text(
+                                    "Tk. 10,000 ",
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black54,
+                                    ),
+                                  )
+                                ],
                               ),
-                            ],
+                            ),
                           ),
-                        )),
+                          SizedBox(
+                            width: 16,
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              height: 101,
+                              width: 152,
+                              decoration: BoxDecoration(
+                                  color: Color(0xffEFE3FF),
+                                  borderRadius: BorderRadius.circular(11)
+                              ),
+
+                              child:Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("Discount From",style: GoogleFonts.poppins(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.black54,
+                                  ),),
+                                  Text("Wholesaler",style: GoogleFonts.poppins(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.black54,
+                                  ),),
+                                  Text("Tk. 10,000 ",style: GoogleFonts.poppins(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black54,
+                                  ),)
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
